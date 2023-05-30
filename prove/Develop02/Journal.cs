@@ -36,10 +36,9 @@ public class Journal{
             }
             else if(choice == "2"){
                 createEntry();
-
             }
             else if(choice == "3"){
-
+                load();
             }
             else if (choice == "4"){
                 save();
@@ -48,7 +47,6 @@ public class Journal{
                 break;
             }
         }
-
     }
 
     public void save(){
@@ -69,7 +67,7 @@ public class Journal{
     }
 
     public void load(){
-        Console.Write("what file do you want to load from");
+        Console.Write("what file do you want to load from: ");
         string filename = Console.ReadLine();
 
         string[] lines = System.IO.File.ReadAllLines(filename);
@@ -83,10 +81,7 @@ public class Journal{
             string text = parts[2];
 
             Entry entry = new Entry();
-
-
-
-
+            entry.loadEntry(date, prompt, text);
 
             entries.Add(entry);
         }

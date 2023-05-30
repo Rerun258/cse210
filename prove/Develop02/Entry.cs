@@ -1,6 +1,6 @@
 public class Entry{
-    private string text;
-    private string date;
+    private string _text;
+    private string _date;
     private string _prompt;
 
     
@@ -9,28 +9,33 @@ public class Entry{
         Prompt prompt = new Prompt();
 
         _prompt = prompt.GetRandomPrompt();
-        Console.Write(_prompt);
-        text = Console.ReadLine();
+        Console.Write($"{_prompt}: ");
+        _text = Console.ReadLine();
         
         DateTime theCurrentTime = DateTime.Now;
-        date = theCurrentTime.ToShortDateString();
-        // Console.Write("What is the Date: ");
-        // date = Console.ReadLine();
+        _date = theCurrentTime.ToShortDateString();
+
 
         
 
     }
     public void display(){
 
-        string x = ($"{date}, {text}");
-        Console.Write(_prompt);
+        string x = ($"{_date},{_prompt}: {_text}");
+        // Console.Write(_prompt);
         Console.WriteLine(x);
     }
 
-        public string write(){
+    public string write(){
 
-        string x = ($"{date},{_prompt},{text}");
+        string x = ($"{_date},{_prompt},{_text}");
         return x;
     }
+
+    public void loadEntry(string date, string prompt, string text){
+        _date = date;
+        _prompt = prompt;
+        _text= text;
+        }
 
 }
