@@ -17,7 +17,7 @@ public class Vip:Elevator{
             _access = false;
         }
         
-        currentFloor = Elivator.getFloor();
+        currentFloor = Elevator.getFloor();
 
 
 
