@@ -3,5 +3,5 @@ class Program
 {
     static void Main(string[] args)
     {}
-        public job job1 = new job();
+        public Job job1 = new Job();
 }
