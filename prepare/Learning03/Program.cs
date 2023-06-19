@@ -4,6 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning03 World!");
+        Fraction test = new Fraction();
+        Fraction test2 = new Fraction(3);
+        Fraction test3 = new Fraction(2,4);
+        
     }
 }
