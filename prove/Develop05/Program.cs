@@ -4,8 +4,6 @@ class Program
     static void Main(string[] args)
     {
         Menu program = new Menu();
-    
-
         List<Goal> goals = new List<Goal>();
         while (true){
             string answer = program.PullMenu();
@@ -22,16 +20,6 @@ class Program
             else if (answer == "6"){
                 break;
             }
-            
         }
-
-
-
-
-    
     }
-
-
-
-
 }

@@ -99,19 +99,15 @@ public class Menu{
     public virtual void read(){
         string filename = "myFile.txt";
         string[] lines = System.IO.File.ReadAllLines(filename);
-
         foreach (string line in lines)
         {
             string[] parts = line.Split(",");
-
-
         }
     }
     public virtual void write(Goal write){
         if (write.GetGoalType() == "Goal"){
             string filename = "mygoals.txt";
             string writestring = $"{write.GetGoalType()}, {write.GetName()}, {write.GetDiscription()}, {write.GetPointsIfDone()}, {write.getIfCompleated()} ";
-
             using (StreamWriter outputFile = new StreamWriter(filename))
             {
                 // You can add text to the file with the WriteLine method
@@ -121,7 +117,6 @@ public class Menu{
         else if (write.GetGoalType() == "EternalGoal"){
             string filename = "mygoals.txt";
             string writestring = $"{write.GetGoalType()}, {write.GetName()}, {write.GetDiscription()}, {write.GetPointsIfDone()}, {write.getIfCompleated()} ";
-
             using (StreamWriter outputFile = new StreamWriter(filename))
             {
                 // You can add text to the file with the WriteLine method

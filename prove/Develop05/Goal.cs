@@ -70,8 +70,4 @@ public class Goal{
         Console.WriteLine($"Name of Goal: {_goalName}\nDiscription: {_goalDiscription}\n Compleated: {_compleated}\nPoint: {_pointsIfDone}");
     }
 
-
-
-
-
 }
